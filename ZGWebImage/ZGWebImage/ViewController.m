@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import "UIImageView+ZGWebCache.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -20,6 +21,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _tableView = [[UITableView alloc] init];
+    _tableView.frame = self.view.bounds;
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    [self.view addSubview:_tableView];
+    
+}
+
+- (void)example1
+{
     _imageView = [[UIImageView alloc] init];
     _imageView.frame = CGRectMake(100, 100, 100, 100);
     _imageView.backgroundColor = [UIColor redColor];
@@ -30,5 +41,22 @@
 }
 
 
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 50;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ZGWebImageExample"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ZGWebImageExample"];
+    }
+    [cell.imageView zg_setImageWithUrl:[NSURL URLWithString:@"http://anchortest.shuoba.org/anchorImage/10979/3410b8fe210331d215000499fa54c120"]];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 90.0;
+}
 
 @end

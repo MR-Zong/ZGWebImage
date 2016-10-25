@@ -24,11 +24,33 @@
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
             _imageCache_ = [[ZGImageCache alloc] init];
-            _imageCache_.memoryCache = [[NSCache alloc] init];
+            [_imageCache_ initialize];
         });
     }
     
     return _imageCache_;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)initialize
+{
+    _memoryCache = [[NSCache alloc] init];
+    [self listenNotification];
+}
+
+
+- (void)listenNotification
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveMemoryWarning:) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+}
+
+- (void)didReceiveMemoryWarning:(NSNotification *)note
+{
+    [_memoryCache removeAllObjects];
 }
 
 - (void)storeImage:(UIImage *)image forKey:(NSString *)key
