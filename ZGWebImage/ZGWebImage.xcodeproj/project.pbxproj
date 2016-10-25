@@ -81,7 +81,6 @@
 		EFCFDA1C1DBE4A7000EA5206 /* ZGWebImage */ = {
 			isa = PBXGroup;
 			children = (
-				EFCFDA431DBE4AB800EA5206 /* ZGWebImage */,
 				EFCFDA211DBE4A7000EA5206 /* AppDelegate.h */,
 				EFCFDA221DBE4A7000EA5206 /* AppDelegate.m */,
 				EFCFDA241DBE4A7000EA5206 /* ViewController.h */,
@@ -118,21 +117,6 @@
 				EFCFDA381DBE4A7000EA5206 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EFCFDA431DBE4AB800EA5206 /* ZGWebImage */ = {
-			isa = PBXGroup;
-			children = (
-				EFCFDA441DBE4AB800EA5206 /* module */,
-			);
-			path = ZGWebImage;
-			sourceTree = "<group>";
-		};
-		EFCFDA441DBE4AB800EA5206 /* module */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +418,7 @@
 				EFCFDA3F1DBE4A7000EA5206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFCFDA401DBE4A7000EA5206 /* Build configuration list for PBXNativeTarget "ZGWebImageTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +427,7 @@
 				EFCFDA421DBE4A7000EA5206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
