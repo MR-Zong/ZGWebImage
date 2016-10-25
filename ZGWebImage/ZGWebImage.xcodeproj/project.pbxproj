@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		EF84359B1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EF84359A1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m */; };
 		EF84359E1DBEEEED00BDC466 /* UIImageView+ZGWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EF84359D1DBEEEED00BDC466 /* UIImageView+ZGWebCache.m */; };
+		EF8435A11DBEF1D900BDC466 /* ZGWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8435A01DBEF1D900BDC466 /* ZGWebImageDownloader.m */; };
+		EF8435A41DBEF54800BDC466 /* ZGImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8435A31DBEF54800BDC466 /* ZGImageCache.m */; };
+		EF8435A71DBEFA1200BDC466 /* ZGFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8435A61DBEFA1200BDC466 /* ZGFileCache.m */; };
+		EF8435AA1DBF046500BDC466 /* NSString+ZGMd5.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8435A91DBF046500BDC466 /* NSString+ZGMd5.m */; };
 		EFCFDA201DBE4A7000EA5206 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCFDA1F1DBE4A7000EA5206 /* main.m */; };
 		EFCFDA231DBE4A7000EA5206 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCFDA221DBE4A7000EA5206 /* AppDelegate.m */; };
 		EFCFDA261DBE4A7000EA5206 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCFDA251DBE4A7000EA5206 /* ViewController.m */; };
@@ -33,6 +37,14 @@
 		EF84359A1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZGWebCache.m"; sourceTree = "<group>"; };
 		EF84359C1DBEEEED00BDC466 /* UIImageView+ZGWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZGWebCache.h"; sourceTree = "<group>"; };
 		EF84359D1DBEEEED00BDC466 /* UIImageView+ZGWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZGWebCache.m"; sourceTree = "<group>"; };
+		EF84359F1DBEF1D900BDC466 /* ZGWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGWebImageDownloader.h; sourceTree = "<group>"; };
+		EF8435A01DBEF1D900BDC466 /* ZGWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGWebImageDownloader.m; sourceTree = "<group>"; };
+		EF8435A21DBEF54800BDC466 /* ZGImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGImageCache.h; sourceTree = "<group>"; };
+		EF8435A31DBEF54800BDC466 /* ZGImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGImageCache.m; sourceTree = "<group>"; };
+		EF8435A51DBEFA1200BDC466 /* ZGFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGFileCache.h; sourceTree = "<group>"; };
+		EF8435A61DBEFA1200BDC466 /* ZGFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGFileCache.m; sourceTree = "<group>"; };
+		EF8435A81DBF046500BDC466 /* NSString+ZGMd5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZGMd5.h"; sourceTree = "<group>"; };
+		EF8435A91DBF046500BDC466 /* NSString+ZGMd5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZGMd5.m"; sourceTree = "<group>"; };
 		EFCFDA1A1DBE4A7000EA5206 /* ZGWebImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZGWebImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCFDA1E1DBE4A7000EA5206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFCFDA1F1DBE4A7000EA5206 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -73,6 +85,14 @@
 				EF84359A1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m */,
 				EF84359C1DBEEEED00BDC466 /* UIImageView+ZGWebCache.h */,
 				EF84359D1DBEEEED00BDC466 /* UIImageView+ZGWebCache.m */,
+				EF84359F1DBEF1D900BDC466 /* ZGWebImageDownloader.h */,
+				EF8435A01DBEF1D900BDC466 /* ZGWebImageDownloader.m */,
+				EF8435A21DBEF54800BDC466 /* ZGImageCache.h */,
+				EF8435A31DBEF54800BDC466 /* ZGImageCache.m */,
+				EF8435A51DBEFA1200BDC466 /* ZGFileCache.h */,
+				EF8435A61DBEFA1200BDC466 /* ZGFileCache.m */,
+				EF8435A81DBF046500BDC466 /* NSString+ZGMd5.h */,
+				EF8435A91DBF046500BDC466 /* NSString+ZGMd5.m */,
 			);
 			path = ZGWebImage;
 			sourceTree = "<group>";
@@ -241,7 +261,11 @@
 				EF84359E1DBEEEED00BDC466 /* UIImageView+ZGWebCache.m in Sources */,
 				EFCFDA261DBE4A7000EA5206 /* ViewController.m in Sources */,
 				EFCFDA231DBE4A7000EA5206 /* AppDelegate.m in Sources */,
+				EF8435A11DBEF1D900BDC466 /* ZGWebImageDownloader.m in Sources */,
+				EF8435A71DBEFA1200BDC466 /* ZGFileCache.m in Sources */,
 				EFCFDA201DBE4A7000EA5206 /* main.m in Sources */,
+				EF8435AA1DBF046500BDC466 /* NSString+ZGMd5.m in Sources */,
+				EF8435A41DBEF54800BDC466 /* ZGImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

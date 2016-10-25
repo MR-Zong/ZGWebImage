@@ -10,4 +10,6 @@
 
 @interface UIImageView (ZGWebCache)
 
+- (void)zg_setImageWithUrl:(NSURL *)url;
+
 @end
