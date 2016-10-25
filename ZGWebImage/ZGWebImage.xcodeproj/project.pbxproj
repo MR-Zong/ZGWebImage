@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF84359B1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EF84359A1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m */; };
+		EF84359E1DBEEEED00BDC466 /* UIImageView+ZGWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EF84359D1DBEEEED00BDC466 /* UIImageView+ZGWebCache.m */; };
 		EFCFDA201DBE4A7000EA5206 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCFDA1F1DBE4A7000EA5206 /* main.m */; };
 		EFCFDA231DBE4A7000EA5206 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCFDA221DBE4A7000EA5206 /* AppDelegate.m */; };
 		EFCFDA261DBE4A7000EA5206 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCFDA251DBE4A7000EA5206 /* ViewController.m */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF8435991DBEEEBE00BDC466 /* UIButton+ZGWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZGWebCache.h"; sourceTree = "<group>"; };
+		EF84359A1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZGWebCache.m"; sourceTree = "<group>"; };
+		EF84359C1DBEEEED00BDC466 /* UIImageView+ZGWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZGWebCache.h"; sourceTree = "<group>"; };
+		EF84359D1DBEEEED00BDC466 /* UIImageView+ZGWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZGWebCache.m"; sourceTree = "<group>"; };
 		EFCFDA1A1DBE4A7000EA5206 /* ZGWebImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZGWebImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCFDA1E1DBE4A7000EA5206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFCFDA1F1DBE4A7000EA5206 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +66,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF8435951DBEEDD300BDC466 /* ZGWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				EF8435991DBEEEBE00BDC466 /* UIButton+ZGWebCache.h */,
+				EF84359A1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m */,
+				EF84359C1DBEEEED00BDC466 /* UIImageView+ZGWebCache.h */,
+				EF84359D1DBEEEED00BDC466 /* UIImageView+ZGWebCache.m */,
+			);
+			path = ZGWebImage;
+			sourceTree = "<group>";
+		};
 		EFCFDA111DBE4A7000EA5206 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +98,7 @@
 		EFCFDA1C1DBE4A7000EA5206 /* ZGWebImage */ = {
 			isa = PBXGroup;
 			children = (
+				EF8435951DBEEDD300BDC466 /* ZGWebImage */,
 				EFCFDA211DBE4A7000EA5206 /* AppDelegate.h */,
 				EFCFDA221DBE4A7000EA5206 /* AppDelegate.m */,
 				EFCFDA241DBE4A7000EA5206 /* ViewController.h */,
@@ -219,6 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF84359B1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m in Sources */,
+				EF84359E1DBEEEED00BDC466 /* UIImageView+ZGWebCache.m in Sources */,
 				EFCFDA261DBE4A7000EA5206 /* ViewController.m in Sources */,
 				EFCFDA231DBE4A7000EA5206 /* AppDelegate.m in Sources */,
 				EFCFDA201DBE4A7000EA5206 /* main.m in Sources */,
