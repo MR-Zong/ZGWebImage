@@ -30,10 +30,12 @@
     _imageView = [[UIImageView alloc] init];
     _imageView.frame = CGRectMake(100, 100, 100, 100);
     _imageView.backgroundColor = [UIColor redColor];
-    // 大图地址 http://anchortest.shuoba.org/anchorImage/10979/3410b8fe210331d215000499fa54c120
+    // 大图地址 http://bbsimg.qianlong.com/data/attachment/forum/201409/30/105858f62a7uum6i446770.jpg
     // 小图地址 http://anchortest.shuoba.org/anchorImage/10979/3410b8fe210331d215000499fa54c120
 //    [_imageView zg_setImageWithUrl:[NSURL URLWithString:@"http://anchortest.shuoba.org/anchorImage/10979/3410b8fe210331d215000499fa54c120"]];
-    [_imageView zg_setImageWithUrl:[NSURL URLWithString:@"http://bbsimg.qianlong.com/data/attachment/forum/201409/30/105858f62a7uum6i446770.jpg"] placeholder:[UIImage imageNamed:@"test.jpg"]];
+    [_imageView zg_setImageWithUrl:[NSURL URLWithString:@"http://bbsimg.qianlong.com/data/attachment/forum/201409/30/105858f62a7uum6i446770.jpg"] placeholder:[UIImage imageNamed:@"test.jpg"] completeBlock:^(UIImage *image, NSError *error) {
+        NSLog(@"image %@   ************",image);
+    }];
     [self.view addSubview:_imageView];
 }
 
@@ -56,7 +58,9 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ZGWebImageExample"];
     }
-    [cell.imageView zg_setImageWithUrl:[NSURL URLWithString:@"http://anchortest.shuoba.org/anchorImage/10979/3410b8fe210331d215000499fa54c120"]];
+    [cell.imageView zg_setImageWithUrl:[NSURL URLWithString:@"http://anchortest.shuoba.org/anchorImage/10979/3410b8fe210331d215000499fa54c120"] placeholder:[UIImage imageNamed:@"test.jpg"] completeBlock:^(UIImage *image, NSError *error) {
+        NSLog(@"image %@   ************",image);
+    }];
     return cell;
 }
 

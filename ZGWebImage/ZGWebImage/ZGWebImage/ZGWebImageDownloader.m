@@ -37,7 +37,9 @@
         [[NSFileManager defaultManager] moveItemAtURL:location toURL:[NSURL fileURLWithPath:filePath] error:nil];
         
         if (completeBlock) {
-            completeBlock([[ZGFileCache defaultFileCache] imageForKey:url.description],error);
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                completeBlock([[ZGFileCache defaultFileCache] imageForKey:url.description],error);
+            });
         }
     }];
     // 启动任务

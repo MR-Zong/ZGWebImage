@@ -95,13 +95,13 @@ NSString *const fileCacheDirectory = @"zgDefaults";
                     //文件大小
                      NSNumber *fileSize = [fileAttributes objectForKey:NSFileSize];
                     if (fileSize) {
-                        NSLog(@"File size: %qi\n", [fileSize unsignedLongLongValue]);
+//                        NSLog(@"File size: %qi\n", [fileSize unsignedLongLongValue]);
                     }
                     //文件创建日期
                     NSDate *creationDate = [fileAttributes objectForKey:NSFileCreationDate];
                     
                     if (creationDate) {
-                        NSLog(@"File creationDate: %@\n", creationDate);
+//                        NSLog(@"File creationDate: %@\n", creationDate);
                         NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
                         
                         NSDateComponents *comp = [calendar components:NSCalendarUnitDay
@@ -116,12 +116,12 @@ NSString *const fileCacheDirectory = @"zgDefaults";
                     //文件所有者
                     NSString *fileOwner = [fileAttributes objectForKey:NSFileOwnerAccountName];
                     if (fileOwner) {
-                        NSLog(@"Owner: %@\n", fileOwner);
+//                        NSLog(@"Owner: %@\n", fileOwner);
                     }
                     //文件修改日期
                     NSDate *fileModDate = [fileAttributes objectForKey:NSFileModificationDate];
                     if (fileModDate) {
-                        NSLog(@"Modification date: %@\n", fileModDate);
+//                        NSLog(@"Modification date: %@\n", fileModDate);
                     }
                 }
                 else {
@@ -163,7 +163,7 @@ NSString *const fileCacheDirectory = @"zgDefaults";
 - (UIImage *)imageForKey:(NSString *)key
 {
     NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:fileCacheDirectory] stringByAppendingPathComponent:key.md5String];
-    NSLog(@"filePath %@",filePath);
+//    NSLog(@"filePath %@",filePath);
     UIImage *image = [[UIImage alloc] initWithContentsOfFile:filePath];
     return image;
 }
