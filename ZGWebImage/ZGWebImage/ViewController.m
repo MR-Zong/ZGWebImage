@@ -8,11 +8,13 @@
 
 #import "ViewController.h"
 #import "UIImageView+ZGWebCache.h"
+#import "UIButton+ZGWebCache.h"
 
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIButton *btn;
 
 @end
 
@@ -21,8 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   
-    [self example1];
+    [self example3];
 }
 
 - (void)example1
@@ -47,6 +48,18 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
 }
+
+- (void)example3
+{
+    self.btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.btn.frame = CGRectMake(100, 100, 100, 100);
+    self.btn.backgroundColor = [UIColor orangeColor];
+    [self.btn zg_setImageWithUrl:[NSURL URLWithString:@"http://bbsimg.qianlong.com/data/attachment/forum/201409/30/105858f62a7uum6i446770.jpg"] forState:UIControlStateNormal placeholder:[UIImage imageNamed:@"test.jpg"] completeBlock:^(UIImage *image, NSError *error) {
+        NSLog(@"image %@   ************",image);;
+    }];
+    [self.view addSubview:self.btn];
+}
+
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
