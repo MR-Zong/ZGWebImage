@@ -10,6 +10,7 @@
 #import "ZGWebImageDownloader.h"
 #import "ZGImageCache.h"
 #import "ZGFileCache.h"
+#import "UIImage+ZGGif.h"
 
 @implementation UIImageView (ZGWebCache)
 
@@ -26,7 +27,7 @@
     // 内存缓存获取
     UIImage *tmpImage = [[ZGImageCache defaultImageCache] imageForKey:url.description];
     if (tmpImage) {
-        self.image = tmpImage;
+        [self zg_useImageTypeSetImage:tmpImage];
         
         if (completeBlock) {
             completeBlock(tmpImage,nil);
@@ -37,7 +38,7 @@
     // 文件缓存获取
     tmpImage = [[ZGFileCache defaultFileCache] imageForKey:url.description];
     if (tmpImage) {
-        self.image = tmpImage;
+        [self zg_useImageTypeSetImage:tmpImage];
         
         if (completeBlock) {
             completeBlock(tmpImage,nil);
@@ -60,8 +61,8 @@
                 typeof(weakSelf) strongSelf = weakSelf;
                 if (strongSelf) {
                     
-                    // 下载成功设置图片
-                    strongSelf.image = image;
+                    // 下载成功 设置图片
+                    [strongSelf zg_useImageTypeSetImage:image];
                     
                     // 内存缓存
                     [[ZGImageCache defaultImageCache] storeImage:image forKey:url.description];
@@ -92,6 +93,20 @@
         self.image = placeholder;
     }
     [self zg_setImageWithUrl:url completeBlock:completeBlock];
+}
+
+
+#pragma mark - zg_useImageTypeSetImage
+- (void)zg_useImageTypeSetImage:(UIImage *)image
+{
+    if ([image.imageType isEqualToString:ZGImageTypeGIF]) {
+        self.animationImages = image.frames;
+        self.animationDuration = self.animationImages.count * 0.1;
+        //开始播放动画
+        [self startAnimating];
+    }else {
+        self.image = image;
+    }
 }
 
 @end

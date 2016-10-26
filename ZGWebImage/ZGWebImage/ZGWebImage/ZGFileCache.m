@@ -7,6 +7,7 @@
 //
 
 #import "ZGFileCache.h"
+#import "UIImage+ZGGif.h"
 
 NSString *const fileCacheDirectory = @"zgDefaults";
 
@@ -164,7 +165,12 @@ NSString *const fileCacheDirectory = @"zgDefaults";
 {
     NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:fileCacheDirectory] stringByAppendingPathComponent:key.md5String];
 //    NSLog(@"filePath %@",filePath);
-    UIImage *image = [[UIImage alloc] initWithContentsOfFile:filePath];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    UIImage *image = [[UIImage alloc] initWithData:data];
+    image.imageType = [UIImage typeForImageData:data];
+    if ([image.imageType isEqualToString:ZGImageTypeGIF]) {
+        image.frames = [image framesWithData:data];
+    }
     return image;
 }
 

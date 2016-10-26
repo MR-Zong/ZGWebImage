@@ -23,18 +23,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self example3];
+    // 样例演示
+    [self example1];
+//    [self example2];
+//    [self example3];
 }
 
 - (void)example1
 {
     _imageView = [[UIImageView alloc] init];
     _imageView.frame = CGRectMake(100, 100, 100, 100);
-    _imageView.backgroundColor = [UIColor redColor];
+    _imageView.backgroundColor = [UIColor orangeColor];
     // 大图地址 http://bbsimg.qianlong.com/data/attachment/forum/201409/30/105858f62a7uum6i446770.jpg
     // 小图地址 http://anchortest.shuoba.org/anchorImage/10979/3410b8fe210331d215000499fa54c120
+    // gif图地址 http://f.hiphotos.baidu.com/baike/s%3D220/sign=f6aa19fa0db30f24319aeb01f894d192/8601a18b87d6277f130c80a32a381f30e924fc0b.jpg
 //    [_imageView zg_setImageWithUrl:[NSURL URLWithString:@"http://anchortest.shuoba.org/anchorImage/10979/3410b8fe210331d215000499fa54c120"]];
-    [_imageView zg_setImageWithUrl:[NSURL URLWithString:@"http://bbsimg.qianlong.com/data/attachment/forum/201409/30/105858f62a7uum6i446770.jpg"] placeholder:[UIImage imageNamed:@"test.jpg"] completeBlock:^(UIImage *image, NSError *error) {
+    [_imageView zg_setImageWithUrl:[NSURL URLWithString:@"http://f.hiphotos.baidu.com/baike/s%3D220/sign=f6aa19fa0db30f24319aeb01f894d192/8601a18b87d6277f130c80a32a381f30e924fc0b.jpg"] placeholder:[UIImage imageNamed:@"test.jpg"] completeBlock:^(UIImage *image, NSError *error) {
         NSLog(@"image %@   ************",image);
     }];
     [self.view addSubview:_imageView];
