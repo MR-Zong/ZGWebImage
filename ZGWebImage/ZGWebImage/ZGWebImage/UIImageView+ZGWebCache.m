@@ -15,10 +15,69 @@
 
 - (void)zg_setImageWithUrl:(NSURL *)url
 {
+    [self zg_setImageWithUrl:url completeBlock:nil];
+    
+    
+    
+//    if (url.description.length <= 0) {
+//        return;
+//    }
+//    
+//    // 内存缓存获取
+//    UIImage *tmpImage = [[ZGImageCache defaultImageCache] imageForKey:url.description];
+//    if (tmpImage) {
+//        self.image = tmpImage;
+//        return;
+//    }
+//    
+//    // 文件缓存获取
+//    tmpImage = [[ZGFileCache defaultFileCache] imageForKey:url.description];
+//    if (tmpImage) {
+//        self.image = tmpImage;
+//        // 内存缓存
+//        [[ZGImageCache defaultImageCache] storeImage:tmpImage forKey:url.description];
+//        return;
+//    }
+//    
+//    // 下载
+//    __weak typeof(self) weakSelf = self;
+//    ZGWebImageDownloader *defaultWebImageDownLoader = [ZGWebImageDownloader defaulteWebImageDownLoader];
+//    [defaultWebImageDownLoader downLoaderImageWithUrl:url completeBlock:^(UIImage *image,NSError *error) {
+//        if (!error) {
+//            if (image) {
+//                typeof(weakSelf) strongSelf = weakSelf;
+//                if (strongSelf) {
+//                    dispatch_sync(dispatch_get_main_queue(), ^{
+//                        // 下载成功设置图片
+//                        strongSelf.image = image;
+//                    });
+//                    // 内存缓存
+//                    [[ZGImageCache defaultImageCache] storeImage:image forKey:url.description];
+//                }
+//            }
+//        }
+//    }];
+    
+}
+
+- (void)zg_setImageWithUrl:(NSURL *)url completeBlock:(void (^)(UIImage *image,NSError *error))completeBlock
+{
+    if (url.description.length <= 0) {
+        
+        if (completeBlock) {
+            completeBlock(nil,nil);
+        }
+        return;
+    }
+    
     // 内存缓存获取
     UIImage *tmpImage = [[ZGImageCache defaultImageCache] imageForKey:url.description];
     if (tmpImage) {
         self.image = tmpImage;
+        
+        if (completeBlock) {
+            completeBlock(tmpImage,nil);
+        }
         return;
     }
     
@@ -26,6 +85,10 @@
     tmpImage = [[ZGFileCache defaultFileCache] imageForKey:url.description];
     if (tmpImage) {
         self.image = tmpImage;
+        
+        if (completeBlock) {
+            completeBlock(tmpImage,nil);
+        }
         // 内存缓存
         [[ZGImageCache defaultImageCache] storeImage:tmpImage forKey:url.description];
         return;
@@ -35,6 +98,10 @@
     __weak typeof(self) weakSelf = self;
     ZGWebImageDownloader *defaultWebImageDownLoader = [ZGWebImageDownloader defaulteWebImageDownLoader];
     [defaultWebImageDownLoader downLoaderImageWithUrl:url completeBlock:^(UIImage *image,NSError *error) {
+        
+        if (completeBlock) {
+            completeBlock(tmpImage,error);
+        }
         if (!error) {
             if (image) {
                 typeof(weakSelf) strongSelf = weakSelf;
@@ -49,7 +116,23 @@
             }
         }
     }];
-    
+}
+
+
+- (void)zg_setImageWithUrl:(NSURL *)url placeholder:(UIImage *)placeholder
+{
+    if (placeholder) {
+        self.image = placeholder;
+    }
+    [self zg_setImageWithUrl:url completeBlock:nil];
+}
+
+- (void)zg_setImageWithUrl:(NSURL *)url placeholder:(UIImage *)placeholder completeBlock:(void (^)(UIImage *image,NSError *error))completeBlock
+{
+    if (placeholder) {
+        self.image = placeholder;
+    }
+    [self zg_setImageWithUrl:url completeBlock:completeBlock];
 }
 
 @end

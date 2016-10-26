@@ -21,12 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _tableView = [[UITableView alloc] init];
-    _tableView.frame = self.view.bounds;
-    _tableView.dataSource = self;
-    _tableView.delegate = self;
-    [self.view addSubview:_tableView];
-    
+   
+    [self example1];
 }
 
 - (void)example1
@@ -36,10 +32,19 @@
     _imageView.backgroundColor = [UIColor redColor];
     // 大图地址 http://anchortest.shuoba.org/anchorImage/10979/3410b8fe210331d215000499fa54c120
     // 小图地址 http://anchortest.shuoba.org/anchorImage/10979/3410b8fe210331d215000499fa54c120
-    [_imageView zg_setImageWithUrl:[NSURL URLWithString:@"http://anchortest.shuoba.org/anchorImage/10979/3410b8fe210331d215000499fa54c120"]];
+//    [_imageView zg_setImageWithUrl:[NSURL URLWithString:@"http://anchortest.shuoba.org/anchorImage/10979/3410b8fe210331d215000499fa54c120"]];
+    [_imageView zg_setImageWithUrl:[NSURL URLWithString:@"http://bbsimg.qianlong.com/data/attachment/forum/201409/30/105858f62a7uum6i446770.jpg"] placeholder:[UIImage imageNamed:@"test.jpg"]];
     [self.view addSubview:_imageView];
 }
 
+- (void)example2
+{
+    _tableView = [[UITableView alloc] init];
+    _tableView.frame = self.view.bounds;
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    [self.view addSubview:_tableView];
+}
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

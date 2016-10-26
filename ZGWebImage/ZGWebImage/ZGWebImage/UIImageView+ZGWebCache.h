@@ -11,5 +11,8 @@
 @interface UIImageView (ZGWebCache)
 
 - (void)zg_setImageWithUrl:(NSURL *)url;
+- (void)zg_setImageWithUrl:(NSURL *)url completeBlock:(void (^)(UIImage *image,NSError *error))completeBlock;
+- (void)zg_setImageWithUrl:(NSURL *)url placeholder:(UIImage *)placeholder;
+- (void)zg_setImageWithUrl:(NSURL *)url placeholder:(UIImage *)placeholder completeBlock:(void (^)(UIImage *image,NSError *error))completeBlock;
 
 @end

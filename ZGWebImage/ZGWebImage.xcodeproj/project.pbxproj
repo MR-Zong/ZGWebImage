@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF42D3A31DC045AD00360EE4 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF42D3A21DC045AD00360EE4 /* test.jpg */; };
 		EF84359B1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EF84359A1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m */; };
 		EF84359E1DBEEEED00BDC466 /* UIImageView+ZGWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EF84359D1DBEEEED00BDC466 /* UIImageView+ZGWebCache.m */; };
 		EF8435A11DBEF1D900BDC466 /* ZGWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8435A01DBEF1D900BDC466 /* ZGWebImageDownloader.m */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF42D3A21DC045AD00360EE4 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		EF8435991DBEEEBE00BDC466 /* UIButton+ZGWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZGWebCache.h"; sourceTree = "<group>"; };
 		EF84359A1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZGWebCache.m"; sourceTree = "<group>"; };
 		EF84359C1DBEEEED00BDC466 /* UIImageView+ZGWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZGWebCache.h"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		EFCFDA1D1DBE4A7000EA5206 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF42D3A21DC045AD00360EE4 /* test.jpg */,
 				EFCFDA1E1DBE4A7000EA5206 /* Info.plist */,
 				EFCFDA1F1DBE4A7000EA5206 /* main.m */,
 			);
@@ -240,6 +243,7 @@
 				EFCFDA291DBE4A7000EA5206 /* Main.storyboard in Resources */,
 				EFCFDA2E1DBE4A7000EA5206 /* LaunchScreen.xib in Resources */,
 				EFCFDA2B1DBE4A7000EA5206 /* Images.xcassets in Resources */,
+				EF42D3A31DC045AD00360EE4 /* test.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

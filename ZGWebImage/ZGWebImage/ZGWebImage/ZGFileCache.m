@@ -163,6 +163,7 @@ NSString *const fileCacheDirectory = @"zgDefaults";
 - (UIImage *)imageForKey:(NSString *)key
 {
     NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:fileCacheDirectory] stringByAppendingPathComponent:key.md5String];
+    NSLog(@"filePath %@",filePath);
     UIImage *image = [[UIImage alloc] initWithContentsOfFile:filePath];
     return image;
 }
