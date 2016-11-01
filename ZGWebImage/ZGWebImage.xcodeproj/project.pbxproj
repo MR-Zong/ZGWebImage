@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF357E791DC845170004F860 /* ZGWebImageShow1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF357E771DC845170004F860 /* ZGWebImageShow1.jpg */; };
+		EF357E7A1DC845170004F860 /* ZGWebImageShow2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF357E781DC845170004F860 /* ZGWebImageShow2.jpg */; };
 		EF42D3A31DC045AD00360EE4 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF42D3A21DC045AD00360EE4 /* test.jpg */; };
 		EF42D3A61DC08F4B00360EE4 /* UIImage+ZGGif.m in Sources */ = {isa = PBXBuildFile; fileRef = EF42D3A51DC08F4B00360EE4 /* UIImage+ZGGif.m */; };
 		EF84359B1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EF84359A1DBEEEBE00BDC466 /* UIButton+ZGWebCache.m */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF357E771DC845170004F860 /* ZGWebImageShow1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZGWebImageShow1.jpg; sourceTree = "<group>"; };
+		EF357E781DC845170004F860 /* ZGWebImageShow2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZGWebImageShow2.jpg; sourceTree = "<group>"; };
 		EF42D3A21DC045AD00360EE4 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		EF42D3A41DC08F4B00360EE4 /* UIImage+ZGGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZGGif.h"; sourceTree = "<group>"; };
 		EF42D3A51DC08F4B00360EE4 /* UIImage+ZGGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZGGif.m"; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 		EFCFDA1D1DBE4A7000EA5206 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF357E771DC845170004F860 /* ZGWebImageShow1.jpg */,
+				EF357E781DC845170004F860 /* ZGWebImageShow2.jpg */,
 				EF42D3A21DC045AD00360EE4 /* test.jpg */,
 				EFCFDA1E1DBE4A7000EA5206 /* Info.plist */,
 				EFCFDA1F1DBE4A7000EA5206 /* main.m */,
@@ -246,9 +252,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFCFDA291DBE4A7000EA5206 /* Main.storyboard in Resources */,
+				EF357E7A1DC845170004F860 /* ZGWebImageShow2.jpg in Resources */,
 				EFCFDA2E1DBE4A7000EA5206 /* LaunchScreen.xib in Resources */,
 				EFCFDA2B1DBE4A7000EA5206 /* Images.xcassets in Resources */,
 				EF42D3A31DC045AD00360EE4 /* test.jpg in Resources */,
+				EF357E791DC845170004F860 /* ZGWebImageShow1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
